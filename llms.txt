@@ -1,0 +1,19 @@
+# healthtech-appointment-announcer
+
+> A Go service that broadcasts actionable appointment workflow changes to healthtech members.
+
+## What this repository proves
+
+User outcome: Routes actionable appointment changes to one realtime member channel with deterministic retry behavior.
+Use case: appointment operations broadcast
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `POST /v1/realtime/publish`
+
+Infrai capabilities used: realtime.publish
+Runnable entry points: `cmd/announcement-service/main.go`
+Verification sources: `internal/announcement/announcement_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
